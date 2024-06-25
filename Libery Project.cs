@@ -3,6 +3,7 @@ using System;
 class Program
 {
     static List<Kitap> Kitaplar = new List<Kitap>();
+    static List<Kullanici> Kullaniciler = new List<Kullanici>();
     static void Main()
     {
         Console.BackgroundColor = ConsoleColor.DarkCyan;
@@ -40,19 +41,19 @@ class Program
                 break;
             case 1: 
                 Console.Clear();
-                //KitapEkle();
+                KitapEkle();
                 break;
             case 2:
                 Console.Clear();
-                //KitaplariGor();
+                KitaplariGor();
                 break;
             case 3:
                 Console.Clear();
-                //KullaniciEkle();
+                KullaniciEkle();
                 break;
             case 4:
                 Console.Clear();
-                //KullanicileriGor();
+                KullanicileriGor();
                 break;
             default:
                 Console.Clear();
@@ -91,11 +92,29 @@ class Program
     }
     static void KullaniciEkle()
     {
-
+        Console.WriteLine("Lütfen kullanıcının ID'sini giriniz: ");
+        int id = int.Parse(Console.ReadLine());
+        Console.WriteLine("Lütfen kullanıcının adını giriniz: ");
+        string name = Console.ReadLine();
+        Console.WriteLine("Lütfen kullanıcının soyadını giriniz: ");
+        string surname = Console.ReadLine();
+        Console.WriteLine("Lütfen kullanıcının doğum yılını giriniz: ");
+        int age = int.Parse(Console.ReadLine());
+        Kullanici yenikullanici = new Kullanici(id,name,surname,age);
+        Kullaniciler.Add(yenikullanici);
     }
     static void KullanicileriGor()
     {
+        foreach (var i in Kullaniciler)
+        {
+            Console.WriteLine("Kullanıcının ID'si: {0}", i.ID);
+            Console.WriteLine("Kullanıcının adı: {0}", i.Name);
+            Console.WriteLine("Kullanıcının soyadı: {0}", i.Surname);
+            Console.WriteLine("Kullanıcının yaşı: {0}", i.Age);
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("--------------------------------------");
 
+        }
     }
 }
 
@@ -113,4 +132,20 @@ class Kitap
         BookWriter = bookwriter;
         Year = year;
     }
+}
+class Kullanici
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public string Surname {  get; set; }
+    public int Age {  get; set; }
+
+    public Kullanici(int id,string name,string surname,int age) 
+    {
+        ID = id;
+        Name = name;
+        Surname = surname;
+        Age = age;
+    }
+
 }

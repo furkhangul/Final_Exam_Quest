@@ -1,3 +1,10 @@
+#soru
+/*Üretici firma, model ve üretim tarihi gibi özelliklere sahip “Cihaz” adında bir temel sınıf oluşturun. Bu sınıfı, ek
+özelliklere sahip olan “Akıllı Telefon” ve “Dizüstü Bilgisayar” adında iki yeni sınıf şeklinde genişletin. Her iki sınıfın
+da kendine ait ek özellikleri olmalıdır. Örneğin; Akıllı Telefon'un “ekranBoyutu” ve Dizüstü Bilgisayar'ın “işlemciTipi”
+gibi... Bu sınıfların kodlamasını yapın.*/
+
+
 using System;
 using System.ComponentModel.Design;
 

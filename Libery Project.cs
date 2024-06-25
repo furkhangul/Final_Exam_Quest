@@ -1,5 +1,4 @@
 using System;
-
 class Program
 {
     static List<Kitap> Kitaplar = new List<Kitap>();

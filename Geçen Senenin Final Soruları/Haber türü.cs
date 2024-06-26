@@ -6,7 +6,6 @@ hangi kategoriye ait olduğunu söylemelidir. Uygulamanızı, basit düzeyde en 
 ettiğine göre karar verecek şekilde tasarlayabilirsiniz (Örneğin en çok “maç” kelimesi geçiyorsa, bu haber muhtemelen
 spor kategorisindedir).
 */
-
 using System;
 
 class Program
